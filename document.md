@@ -101,3 +101,11 @@ $ git commit
 コミットidは、リベースしたいところの1つ前を指定する。
 ** --abort
 間違ったrebaseを削除する
+
+# pullコマンドについて
+* リモートリポジトリの変更を取り込むコマンド
+
+  ```
+  git pull [remote repository PATH] [branch]
+  ```
+
