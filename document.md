@@ -84,6 +84,26 @@ git checkout -b new-branch origin/master
 
 $ git commit
 ```
+# resetコマンドについて
+いろいろなかったことにするコマンド。
+
+* ローカルリポジトリを強制的に指定のバージョンに合わせる
+手元の作業ツリーとインデックスはすべて消える。
+
+```
+git reset --hard origin/master
+```
+
+* コミットを取り消す
+```
+git reset --hard 129d634
+```
+```
+git reset --soft	現在のbranchの先頭 だけをリセット
+git reset
+git reset --mixed	現在のbranchの先頭と、インデックスをリセット
+git reset --hard	現在のbranchの先頭、インデックスと作業ツリーを全部リセット
+```
 
 # rebaseコマンドについて
 * 一方のブランチにコミットされたすべての変更をもう一方のブランチで再現する（＝コピーする）
@@ -99,6 +119,13 @@ $ git commit
 ** -i
 細かいcommitをまとめて、1つの大きめのコミットとする
 コミットidは、リベースしたいところの1つ前を指定する。
+```
+git rebase -i HEAD~4
+```
+```
+git rebase -i HEAD~~~~
+```
+のような指定も可能
 ** --abort
 間違ったrebaseを削除する
 
@@ -109,3 +136,18 @@ $ git commit
   ```
   git pull [remote repository PATH] [branch]
   ```
+
+** --continue
+rebaseを続行する
+もしrebase中で無い場合は、
+```No rebase in progress?``` のメッセージが表示されます。
+** --skip
+コンフリクトを解消したとき、1つ前のコミットと差がなくなってしまった時などにrebaseをスキップする
+** --onto
+ブランチをそのまま移動させる
+
+リベースした後は、remoteにpushする必要があるが、コミットハッシュが変わってしまうので
+```
+git push -f
+```
+としないといけない
