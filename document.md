@@ -32,14 +32,6 @@ git commit -m 'commit comment'
 * commit後にローカルの変更をサーバー上へ反映（アップロード）することをpushという
   * -f をつけるとローカルの状態を強制的にサーバー上へ反映するので使い方は要注意
 
-# pullコマンドについて
-
-  * サーバー上の変更内容をローカルへ反映することをpullという。fetch + mergeのイメージ
-    * 以下コマンドでマージせず、リベースが可能
-```
-git pull --rebase
-```
-
 # cloneコマンドについて
 
 * リモートリポジトリの内容をローカルにコピーするためのコマンド
@@ -59,6 +51,14 @@ From https://github.com/shigesan1019/gbc
    66e449d..84d0e59  master     -> origin/master
 Updating 66e449d..84d0e59
 
+
+# cherry-pickについて
+* cherry-pick コミットIDでそのコミットを反映させることができる
+  * 特定のコミットの内容を反映させたいときに使う。主にバグ修正など
+  * git log などで特定のコミットIDを確認して実行する
+```
+git cherry-pick 546de2cc727fcae02646c6af637f401e4238feef
+```
 
 # checkout について
 * checkout
@@ -108,4 +108,3 @@ $ git commit
   ```
   git pull [remote repository PATH] [branch]
   ```
-
