@@ -9,11 +9,10 @@
   * ファイルの変更や追加をリポジトリに保存するコマンド。
 
   * 文法
-  ``` git commit
-  ``` git commit -m 'commit comment'
   ```
-
-
+  git commit
+  git commit -m 'commit comment'
+  ```
 
 # cloneコマンドについて
 
@@ -22,5 +21,6 @@
   * リモートリポジトリのパスの拡張子は.git
   * 通常はmasterブランチを持ってくるが、以下コマンドでブランチ指定が可能
 
-``` git clone -b [ブランチ名] --single-branch [リモートリポジトリ名]
+```
+git clone -b [ブランチ名] --single-branch [リモートリポジトリ名]
 ```
