@@ -61,7 +61,7 @@ Updating 66e449d..84d0e59
 
 
 # checkout について
-* checkout 
+* checkout
 ブランチを変更する。
 ```
 git checkout [branch名]
@@ -84,8 +84,6 @@ git checkout -b new-branch origin/master
 
 $ git commit
 ```
-
-%--------------------------------------------------------------------------------------------------%
 
 # rebaseコマンドについて
 * 一方のブランチにコミットされたすべての変更をもう一方のブランチで再現する（＝コピーする）
