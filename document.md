@@ -12,6 +12,9 @@
   ``` git commit
   ``` git commit -m 'commit comment'
 
+# commit -aコマンドについて
+* 変更されたファイル(新規を除く)をインデックスに追加し,コミットするコマンド
+
 # cloneコマンドについて
 
 * リモートリポジトリの内容をローカルにコピーするためのコマンド
@@ -21,9 +24,5 @@
 
 * 文法
 ``` git commit
-``` git commit -m 'commit comment'
-
-# commit -aコマンドについて
-* 変更されたファイル(新規を除く)をインデックスに追加し,コミットするコマンド
- 
+``` git commit -m 'commit comment' 
 ``` git clone -b [ブランチ名] --single-branch [リモートリポジトリ名]
