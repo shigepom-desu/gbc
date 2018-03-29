@@ -28,7 +28,16 @@ git clone -b [ブランチ名] --single-branch [リモートリポジトリ名]
 # rebaseコマンドについて
 * 一方のブランチにコミットされたすべての変更をもう一方のブランチで再現する（＝コピーする）
 * masterを一直線にし、fast forwardをできるようにする、等の用途で用いることができる
+
   ``` 
   git rebase master
   git rebase --onto master server client
+  git rebase -i コミットid
+  git rebase --abort
   ```
+  
+** -i
+細かいcommitをまとめて、1つの大きめのコミットとする
+コミットidは、リベースしたいところの1つ前を指定する。
+** --abort
+間違ったrebaseを削除する
