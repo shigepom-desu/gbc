@@ -19,11 +19,18 @@
   git commit -m 'commit comment'
   ```
 * 文法
-``` git commit
-``` git commit -m 'commit comment'
+```
+git commit
+git commit -m 'commit comment'
+```
 
 # commit -aコマンドについて
 * 変更されたファイル(新規を除く)をインデックスに追加し,コミットするコマンド
+
+# pushコマンドについて
+
+* commit後にローカルの変更をサーバー上へ反映（アップロード）することをpushという。
+  * -f をつけるとローカルの状態を強制的にサーバー上へ反映するので使い方は要注意
 
 # cloneコマンドについて
 
@@ -74,16 +81,15 @@ $ git commit
 * 一方のブランチにコミットされたすべての変更をもう一方のブランチで再現する（＝コピーする）
 * masterを一直線にし、fast forwardをできるようにする、等の用途で用いることができる
 
-  ``` 
+  ```
   git rebase master
   git rebase --onto master server client
   git rebase -i コミットid
   git rebase --abort
   ```
-  
+
 ** -i
 細かいcommitをまとめて、1つの大きめのコミットとする
 コミットidは、リベースしたいところの1つ前を指定する。
 ** --abort
 間違ったrebaseを削除する
-
