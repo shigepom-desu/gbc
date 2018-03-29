@@ -52,6 +52,33 @@ From https://github.com/shigesan1019/gbc
 Updating 66e449d..84d0e59
 
 
+# checkout について
+* checkout 
+ブランチを変更する。
+```
+git checkout [branch名]
+```
+
+* chekout -b
+リモートの中身を新しいローカルブランチを作成
+```
+git checkout -b new-branch origin/master
+```
+* コンフリクトした時、どちらか一方を全面的に採用したい場合
+```
+# fileA.txt を現在チェックアウトしているブランチ側の対応に合わせる場合
+ git checkout --ours fileA.txt
+ git add fileA.txt    # add を忘れずに
+
+# fileB.txt をマージさせたブランチ側に合わせる場合
+ git checkout --theirs fileB.txt
+ git add fileB.txt
+
+$ git commit
+```
+
+%--------------------------------------------------------------------------------------------------%
+
 # rebaseコマンドについて
 * 一方のブランチにコミットされたすべての変更をもう一方のブランチで再現する（＝コピーする）
 * masterを一直線にし、fast forwardをできるようにする、等の用途で用いることができる
