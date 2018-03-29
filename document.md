@@ -11,6 +11,9 @@
   * 文法
   ``` git commit
   ``` git commit -m 'commit comment'
+  ```
+
+
 
 # cloneコマンドについて
 
@@ -20,3 +23,4 @@
   * 通常はmasterブランチを持ってくるが、以下コマンドでブランチ指定が可能
 
 ``` git clone -b [ブランチ名] --single-branch [リモートリポジトリ名]
+```
