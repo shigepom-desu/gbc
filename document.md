@@ -104,6 +104,7 @@ $ git commit
 
 # pullコマンドについて
 * リモートリポジトリの変更を取り込むコマンド
+* git pull は git fetch と git merge FETCH_HAED の２つのコマンドのショートハンドとして動作します。
 
   ```
   git pull [remote repository PATH] [branch]
