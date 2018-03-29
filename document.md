@@ -20,3 +20,9 @@
   * 通常はmasterブランチを持ってくるが、以下コマンドでブランチ指定が可能
 
 '''git clone -b [ブランチ名] --single-branch [リモートリポジトリ名]
+
+# rebaseコマンドについて
+* 一方のブランチにコミットされたすべての変更をもう一方のブランチで再現する（＝コピーする）
+* masterを一直線にし、fast forwardをできるようにする、等の用途で用いることができる
+  ``` git rebase master
+  ``` git rebase --onto master server client
